@@ -1,0 +1,134 @@
+{
+	"name": "Source_covidpolicy",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_CosmosDB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "CosmosDbSqlApiCollection",
+		"schema": {
+			"type": "object",
+			"properties": {
+				"countryname": {
+					"type": "string"
+				},
+				"countrycode": {
+					"type": "string"
+				},
+				"date": {
+					"type": "string"
+				},
+				"c1_school_closing": {
+					"type": "integer"
+				},
+				"c1_flag": {
+					"type": "boolean"
+				},
+				"c2_workplace_closing": {
+					"type": "integer"
+				},
+				"c2_flag": {
+					"type": "boolean"
+				},
+				"c3_cancel_public_events": {
+					"type": "integer"
+				},
+				"c3_flag": {
+					"type": "boolean"
+				},
+				"c4_restrictions_on_gatherings": {
+					"type": "integer"
+				},
+				"c4_flag": {
+					"type": "boolean"
+				},
+				"c5_close_public_transport": {
+					"type": "integer"
+				},
+				"c5_flag": {
+					"type": "boolean"
+				},
+				"c6_stay_at_home_requirements": {
+					"type": "integer"
+				},
+				"c6_flag": {
+					"type": "boolean"
+				},
+				"c7_restrictions_on_internal_movement": {
+					"type": "integer"
+				},
+				"c7_flag": {
+					"type": "boolean"
+				},
+				"c8_international_travel_controls": {
+					"type": "integer"
+				},
+				"e1_income_support": {
+					"type": "integer"
+				},
+				"e1_flag": {
+					"type": "boolean"
+				},
+				"e2_debt/contract_relief": {
+					"type": "integer"
+				},
+				"e3_fiscal_measures": {
+					"type": "integer"
+				},
+				"e4_international_support": {
+					"type": "integer"
+				},
+				"h1_public_information_campaigns": {
+					"type": "integer"
+				},
+				"h1_flag": {
+					"type": "boolean"
+				},
+				"h2_testing_policy": {
+					"type": "integer"
+				},
+				"h3_contact_tracing": {
+					"type": "integer"
+				},
+				"h4_emergency_investment_in_healthcare": {
+					"type": "integer"
+				},
+				"h5_investment_in_vaccines": {
+					"type": "integer"
+				},
+				"m1_wildcard": {
+					"type": "null"
+				},
+				"confirmedcases": {
+					"type": "null"
+				},
+				"confirmeddeaths": {
+					"type": "null"
+				},
+				"stringencyindex": {
+					"type": "integer"
+				},
+				"stringencyindexfordisplay": {
+					"type": "integer"
+				},
+				"legacystringencyindex": {
+					"type": "null"
+				},
+				"legacystringencyindexfordisplay": {
+					"type": "null"
+				},
+				"iso_country": {
+					"type": "string"
+				},
+				"load_date": {
+					"type": "string"
+				}
+			}
+		},
+		"typeProperties": {
+			"collectionName": "covidpolicy"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}
