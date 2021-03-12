@@ -1,5 +1,5 @@
 {
-	"name": "Sink_covidpolicy",
+	"name": "Sink_CosmosDBStorage",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "covid19-synapse-aa5ire5ywhlq4-WorkspaceDefaultStorage",

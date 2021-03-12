@@ -446,13 +446,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "Source_covidpolicy",
+						"referenceName": "Source_CosmosDB",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "Sink_covidpolicy",
+						"referenceName": "Sink_CosmosDBStorage",
 						"type": "DatasetReference"
 					}
 				]
