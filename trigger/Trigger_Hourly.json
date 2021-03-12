@@ -2,11 +2,18 @@
 	"name": "Trigger_Hourly",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
-		"pipelines": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Copy_SQLDBToRaw",
+					"type": "PipelineReference"
+				}
+			}
+		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/raw/blobs/",
+			"blobPathBeginsWith": "/raw/blobs/covid19sqldb/",
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/91d350c0-656d-4296-a03d-63691733c4ad/resourceGroups/MDW-hack-326749/providers/Microsoft.Storage/storageAccounts/covid19aa5ire5ywhlq4",
 			"events": [
