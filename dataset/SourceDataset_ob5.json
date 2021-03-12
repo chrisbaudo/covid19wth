@@ -1,0 +1,89 @@
+{
+	"name": "SourceDataset_ob5",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "covid19-synapse-aa5ire5ywhlq4-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "dboCovid19_Metrics_All",
+				"folderPath": "covid19sqldb/In/text/2021/03/11",
+				"fileSystem": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ROWID",
+				"type": "String"
+			},
+			{
+				"name": "ID",
+				"type": "String"
+			},
+			{
+				"name": "Updated",
+				"type": "String"
+			},
+			{
+				"name": "Confirmed",
+				"type": "String"
+			},
+			{
+				"name": "ConfirmedChange",
+				"type": "String"
+			},
+			{
+				"name": "Deaths",
+				"type": "String"
+			},
+			{
+				"name": "DeathsChange",
+				"type": "String"
+			},
+			{
+				"name": "Recovered",
+				"type": "String"
+			},
+			{
+				"name": "RecoveredChange",
+				"type": "String"
+			},
+			{
+				"name": "Latitude",
+				"type": "String"
+			},
+			{
+				"name": "Longitude",
+				"type": "String"
+			},
+			{
+				"name": "ISO2",
+				"type": "String"
+			},
+			{
+				"name": "ISO3",
+				"type": "String"
+			},
+			{
+				"name": "Country_Region",
+				"type": "String"
+			},
+			{
+				"name": "AdminRegion1",
+				"type": "String"
+			},
+			{
+				"name": "AdminRegion2",
+				"type": "String"
+			}
+		]
+	}
+}

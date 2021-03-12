@@ -1,0 +1,232 @@
+{
+	"name": "Copy_CovidMetric",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_ob5",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "raw/covid19sqldb/In/text/2021/03/11/dboCovid19_Metrics_All"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.Case"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"skipLineCount": 0
+						}
+					},
+					"sink": {
+						"type": "SqlPoolSink",
+						"allowPolyBase": true,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": true
+						},
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ROWID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ROWID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Updated",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Updated",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Confirmed",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Confirmed",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ConfirmedChange",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ConfirmedChange",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Deaths",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Deaths",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DeathsChange",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DeathsChange",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Recovered",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Recovered",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RecoveredChange",
+									"type": "String"
+								},
+								"sink": {
+									"name": "RecoveredChange",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Latitude",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Latitude",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Longitude",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Longitude",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ISO2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ISO2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ISO3",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ISO3",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Country_Region",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Country_Region",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AdminRegion1",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AdminRegion1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AdminRegion2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AdminRegion2",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_ob5",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_ob5",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
