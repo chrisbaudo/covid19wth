@@ -1,0 +1,201 @@
+{
+	"name": "SourceDataset_p8p",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "covid19-synapse-aa5ire5ywhlq4-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "data_06f6d1fc-40d6-47b1-9f98-b8cff40fb575_9a8263c9-4cec-46a2-8034-19faf4553c6b.txt",
+				"folderPath": "covid19nosql/In/text/2021/03/11",
+				"fileSystem": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "countryname",
+				"type": "String"
+			},
+			{
+				"name": "countrycode",
+				"type": "String"
+			},
+			{
+				"name": "date",
+				"type": "String"
+			},
+			{
+				"name": "c1_school_closing",
+				"type": "String"
+			},
+			{
+				"name": "c1_flag",
+				"type": "String"
+			},
+			{
+				"name": "c2_workplace_closing",
+				"type": "String"
+			},
+			{
+				"name": "c2_flag",
+				"type": "String"
+			},
+			{
+				"name": "c3_cancel_public_events",
+				"type": "String"
+			},
+			{
+				"name": "c3_flag",
+				"type": "String"
+			},
+			{
+				"name": "c4_restrictions_on_gatherings",
+				"type": "String"
+			},
+			{
+				"name": "c4_flag",
+				"type": "String"
+			},
+			{
+				"name": "c5_close_public_transport",
+				"type": "String"
+			},
+			{
+				"name": "c5_flag",
+				"type": "String"
+			},
+			{
+				"name": "c6_stay_at_home_requirements",
+				"type": "String"
+			},
+			{
+				"name": "c6_flag",
+				"type": "String"
+			},
+			{
+				"name": "c7_restrictions_on_internal_movement",
+				"type": "String"
+			},
+			{
+				"name": "c7_flag",
+				"type": "String"
+			},
+			{
+				"name": "c8_international_travel_controls",
+				"type": "String"
+			},
+			{
+				"name": "e1_income_support",
+				"type": "String"
+			},
+			{
+				"name": "e1_flag",
+				"type": "String"
+			},
+			{
+				"name": "e2_debt/contract_relief",
+				"type": "String"
+			},
+			{
+				"name": "e3_fiscal_measures",
+				"type": "String"
+			},
+			{
+				"name": "e4_international_support",
+				"type": "String"
+			},
+			{
+				"name": "h1_public_information_campaigns",
+				"type": "String"
+			},
+			{
+				"name": "h1_flag",
+				"type": "String"
+			},
+			{
+				"name": "h2_testing_policy",
+				"type": "String"
+			},
+			{
+				"name": "h3_contact_tracing",
+				"type": "String"
+			},
+			{
+				"name": "h4_emergency_investment_in_healthcare",
+				"type": "String"
+			},
+			{
+				"name": "h5_investment_in_vaccines",
+				"type": "String"
+			},
+			{
+				"name": "m1_wildcard",
+				"type": "String"
+			},
+			{
+				"name": "confirmedcases",
+				"type": "String"
+			},
+			{
+				"name": "confirmeddeaths",
+				"type": "String"
+			},
+			{
+				"name": "stringencyindex",
+				"type": "String"
+			},
+			{
+				"name": "stringencyindexfordisplay",
+				"type": "String"
+			},
+			{
+				"name": "legacystringencyindex",
+				"type": "String"
+			},
+			{
+				"name": "legacystringencyindexfordisplay",
+				"type": "String"
+			},
+			{
+				"name": "iso_country",
+				"type": "String"
+			},
+			{
+				"name": "load_date",
+				"type": "String"
+			},
+			{
+				"name": "id",
+				"type": "String"
+			},
+			{
+				"name": "_rid",
+				"type": "String"
+			},
+			{
+				"name": "_self",
+				"type": "String"
+			},
+			{
+				"name": "_etag",
+				"type": "String"
+			},
+			{
+				"name": "_attachments",
+				"type": "String"
+			},
+			{
+				"name": "_ts",
+				"type": "String"
+			}
+		]
+	}
+}
