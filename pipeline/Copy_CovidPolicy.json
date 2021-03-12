@@ -44,12 +44,6 @@
 					},
 					"sink": {
 						"type": "SqlPoolSink",
-						"allowPolyBase": true,
-						"polyBaseSettings": {
-							"rejectValue": 0,
-							"rejectType": "value",
-							"useTypeDefault": true
-						},
 						"tableOption": "autoCreate"
 					},
 					"enableStaging": false,
