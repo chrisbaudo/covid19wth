@@ -1,0 +1,16 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP (100) [ROWID]\n,[ID]\n,[Updated]\n,[Confirmed]\n,[ConfirmedChange]\n,[ISO3]\n,[SourceSystem]\n FROM [dbo].[Case]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"poolName": "ODS",
+				"databaseName": "ODS"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}
