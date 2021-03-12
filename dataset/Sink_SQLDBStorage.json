@@ -1,5 +1,5 @@
 {
-	"name": "DestinationDataset_w9i",
+	"name": "Sink_SQLDBStorage",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "covid19-synapse-aa5ire5ywhlq4-WorkspaceDefaultStorage",
