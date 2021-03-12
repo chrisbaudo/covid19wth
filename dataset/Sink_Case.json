@@ -1,9 +1,38 @@
 {
-	"name": "DestinationDataset_ob5",
+	"name": "Sink_Case",
 	"properties": {
 		"annotations": [],
 		"type": "SqlPoolTable",
-		"schema": [],
+		"schema": [
+			{
+				"name": "ROWID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Updated",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Confirmed",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ConfirmedChange",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ISO3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SourceSystem",
+				"type": "nvarchar"
+			}
+		],
 		"typeProperties": {
 			"schema": "dbo",
 			"table": "Case"

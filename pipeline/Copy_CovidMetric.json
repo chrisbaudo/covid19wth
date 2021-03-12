@@ -130,7 +130,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_ob5",
+						"referenceName": "Sink_Case",
 						"type": "DatasetReference"
 					}
 				]

@@ -1,9 +1,190 @@
 {
-	"name": "DestinationDataset_p8p",
+	"name": "Sink_Policies",
 	"properties": {
 		"annotations": [],
 		"type": "SqlPoolTable",
-		"schema": [],
+		"schema": [
+			{
+				"name": "countryname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "countrycode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c1_school_closing",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c1_flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c2_workplace_closing",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c2_flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c3_cancel_public_events",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c3_flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c4_restrictions_on_gatherings",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c4_flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c5_close_public_transport",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c5_flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c6_stay_at_home_requirements",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c6_flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c7_restrictions_on_internal_movement",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c7_flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "c8_international_travel_controls",
+				"type": "nvarchar"
+			},
+			{
+				"name": "e1_income_support",
+				"type": "nvarchar"
+			},
+			{
+				"name": "e1_flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "e2_debt/contract_relief",
+				"type": "nvarchar"
+			},
+			{
+				"name": "e3_fiscal_measures",
+				"type": "nvarchar"
+			},
+			{
+				"name": "e4_international_support",
+				"type": "nvarchar"
+			},
+			{
+				"name": "h1_public_information_campaigns",
+				"type": "nvarchar"
+			},
+			{
+				"name": "h1_flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "h2_testing_policy",
+				"type": "nvarchar"
+			},
+			{
+				"name": "h3_contact_tracing",
+				"type": "nvarchar"
+			},
+			{
+				"name": "h4_emergency_investment_in_healthcare",
+				"type": "nvarchar"
+			},
+			{
+				"name": "h5_investment_in_vaccines",
+				"type": "nvarchar"
+			},
+			{
+				"name": "m1_wildcard",
+				"type": "nvarchar"
+			},
+			{
+				"name": "confirmedcases",
+				"type": "nvarchar"
+			},
+			{
+				"name": "confirmeddeaths",
+				"type": "nvarchar"
+			},
+			{
+				"name": "stringencyindex",
+				"type": "nvarchar"
+			},
+			{
+				"name": "stringencyindexfordisplay",
+				"type": "nvarchar"
+			},
+			{
+				"name": "legacystringencyindex",
+				"type": "nvarchar"
+			},
+			{
+				"name": "legacystringencyindexfordisplay",
+				"type": "nvarchar"
+			},
+			{
+				"name": "iso_country",
+				"type": "nvarchar"
+			},
+			{
+				"name": "load_date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "_rid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "_self",
+				"type": "nvarchar"
+			},
+			{
+				"name": "_etag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "_attachments",
+				"type": "nvarchar"
+			},
+			{
+				"name": "_ts",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SourceSystem",
+				"type": "nvarchar"
+			}
+		],
 		"typeProperties": {
 			"schema": "dbo",
 			"table": "Policies"

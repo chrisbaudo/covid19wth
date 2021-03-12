@@ -511,7 +511,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_p8p",
+						"referenceName": "Sink_Policies",
 						"type": "DatasetReference"
 					}
 				]
