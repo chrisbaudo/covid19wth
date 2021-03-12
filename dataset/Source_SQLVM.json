@@ -1,5 +1,5 @@
 {
-	"name": "SourceDataset_4ut",
+	"name": "Source_SQLVM",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_SqlVM",

@@ -55,7 +55,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "SourceDataset_4ut",
+									"referenceName": "Source_SQLVM",
 									"type": "DatasetReference",
 									"parameters": {
 										"cw_table": "@item().source.table"
@@ -64,7 +64,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "DestinationDataset_4ut",
+									"referenceName": "Sink_Storage",
 									"type": "DatasetReference",
 									"parameters": {
 										"cw_fileName": "@item().destination.fileName"
