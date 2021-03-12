@@ -1,0 +1,528 @@
+{
+	"name": "CopyPipeline_p8p",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_p8p",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "raw/covid19nosql/In/text/2021/03/11/data_06f6d1fc-40d6-47b1-9f98-b8cff40fb575_9a8263c9-4cec-46a2-8034-19faf4553c6b.txt"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.Policies"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"additionalColumns": [
+							{
+								"name": "SourceSystem",
+								"value": "NoSqlCovidPolicy"
+							}
+						],
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"skipLineCount": 0
+						}
+					},
+					"sink": {
+						"type": "SqlPoolSink",
+						"allowPolyBase": true,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": true
+						},
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "countryname",
+									"type": "String"
+								},
+								"sink": {
+									"name": "countryname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "countrycode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "countrycode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c1_school_closing",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c1_school_closing",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c1_flag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c1_flag",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c2_workplace_closing",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c2_workplace_closing",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c2_flag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c2_flag",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c3_cancel_public_events",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c3_cancel_public_events",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c3_flag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c3_flag",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c4_restrictions_on_gatherings",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c4_restrictions_on_gatherings",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c4_flag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c4_flag",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c5_close_public_transport",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c5_close_public_transport",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c5_flag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c5_flag",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c6_stay_at_home_requirements",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c6_stay_at_home_requirements",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c6_flag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c6_flag",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c7_restrictions_on_internal_movement",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c7_restrictions_on_internal_movement",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c7_flag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c7_flag",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c8_international_travel_controls",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c8_international_travel_controls",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "e1_income_support",
+									"type": "String"
+								},
+								"sink": {
+									"name": "e1_income_support",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "e1_flag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "e1_flag",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "e2_debt/contract_relief",
+									"type": "String"
+								},
+								"sink": {
+									"name": "e2_debt/contract_relief",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "e3_fiscal_measures",
+									"type": "String"
+								},
+								"sink": {
+									"name": "e3_fiscal_measures",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "e4_international_support",
+									"type": "String"
+								},
+								"sink": {
+									"name": "e4_international_support",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "h1_public_information_campaigns",
+									"type": "String"
+								},
+								"sink": {
+									"name": "h1_public_information_campaigns",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "h1_flag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "h1_flag",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "h2_testing_policy",
+									"type": "String"
+								},
+								"sink": {
+									"name": "h2_testing_policy",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "h3_contact_tracing",
+									"type": "String"
+								},
+								"sink": {
+									"name": "h3_contact_tracing",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "h4_emergency_investment_in_healthcare",
+									"type": "String"
+								},
+								"sink": {
+									"name": "h4_emergency_investment_in_healthcare",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "h5_investment_in_vaccines",
+									"type": "String"
+								},
+								"sink": {
+									"name": "h5_investment_in_vaccines",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "m1_wildcard",
+									"type": "String"
+								},
+								"sink": {
+									"name": "m1_wildcard",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "confirmedcases",
+									"type": "String"
+								},
+								"sink": {
+									"name": "confirmedcases",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "confirmeddeaths",
+									"type": "String"
+								},
+								"sink": {
+									"name": "confirmeddeaths",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "stringencyindex",
+									"type": "String"
+								},
+								"sink": {
+									"name": "stringencyindex",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "stringencyindexfordisplay",
+									"type": "String"
+								},
+								"sink": {
+									"name": "stringencyindexfordisplay",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "legacystringencyindex",
+									"type": "String"
+								},
+								"sink": {
+									"name": "legacystringencyindex",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "legacystringencyindexfordisplay",
+									"type": "String"
+								},
+								"sink": {
+									"name": "legacystringencyindexfordisplay",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "iso_country",
+									"type": "String"
+								},
+								"sink": {
+									"name": "iso_country",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "load_date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "load_date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "_rid",
+									"type": "String"
+								},
+								"sink": {
+									"name": "_rid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "_self",
+									"type": "String"
+								},
+								"sink": {
+									"name": "_self",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "_etag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "_etag",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "_attachments",
+									"type": "String"
+								},
+								"sink": {
+									"name": "_attachments",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "_ts",
+									"type": "String"
+								},
+								"sink": {
+									"name": "_ts",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SourceSystem",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SourceSystem",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_p8p",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_p8p",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

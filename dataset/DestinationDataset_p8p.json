@@ -1,0 +1,16 @@
+{
+	"name": "DestinationDataset_p8p",
+	"properties": {
+		"annotations": [],
+		"type": "SqlPoolTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Policies"
+		},
+		"sqlPool": {
+			"referenceName": "ODS",
+			"type": "SqlPoolReference"
+		}
+	}
+}
