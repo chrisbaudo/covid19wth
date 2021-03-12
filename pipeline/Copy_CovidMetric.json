@@ -38,12 +38,6 @@
 					},
 					"sink": {
 						"type": "SqlPoolSink",
-						"allowPolyBase": true,
-						"polyBaseSettings": {
-							"rejectValue": 0,
-							"rejectType": "value",
-							"useTypeDefault": true
-						},
 						"tableOption": "autoCreate"
 					},
 					"enableStaging": false,
@@ -102,112 +96,11 @@
 							},
 							{
 								"source": {
-									"name": "Deaths",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Deaths",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "DeathsChange",
-									"type": "String"
-								},
-								"sink": {
-									"name": "DeathsChange",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Recovered",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Recovered",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "RecoveredChange",
-									"type": "String"
-								},
-								"sink": {
-									"name": "RecoveredChange",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Latitude",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Latitude",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Longitude",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Longitude",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "ISO2",
-									"type": "String"
-								},
-								"sink": {
-									"name": "ISO2",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
 									"name": "ISO3",
 									"type": "String"
 								},
 								"sink": {
-									"name": "ISO3",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Country_Region",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Country_Region",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "AdminRegion1",
-									"type": "String"
-								},
-								"sink": {
-									"name": "AdminRegion1",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "AdminRegion2",
-									"type": "String"
-								},
-								"sink": {
-									"name": "AdminRegion2",
-									"type": "String"
+									"name": "ISO3"
 								}
 							}
 						]
