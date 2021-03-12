@@ -1,0 +1,16 @@
+{
+	"name": "DestinationDataset_ob5",
+	"properties": {
+		"annotations": [],
+		"type": "SqlPoolTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Case"
+		},
+		"sqlPool": {
+			"referenceName": "ODS",
+			"type": "SqlPoolReference"
+		}
+	}
+}
