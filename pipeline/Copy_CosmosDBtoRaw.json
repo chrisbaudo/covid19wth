@@ -394,51 +394,6 @@
 									"name": "id",
 									"type": "String"
 								}
-							},
-							{
-								"source": {
-									"path": "$['_rid']"
-								},
-								"sink": {
-									"name": "_rid",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"path": "$['_self']"
-								},
-								"sink": {
-									"name": "_self",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"path": "$['_etag']"
-								},
-								"sink": {
-									"name": "_etag",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"path": "$['_attachments']"
-								},
-								"sink": {
-									"name": "_attachments",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"path": "$['_ts']"
-								},
-								"sink": {
-									"name": "_ts",
-									"type": "String"
-								}
 							}
 						],
 						"mapComplexValuesToString": false
