@@ -1,5 +1,5 @@
 {
-	"name": "Sink_Case",
+	"name": "Sink_Cases",
 	"properties": {
 		"annotations": [],
 		"type": "SqlPoolTable",

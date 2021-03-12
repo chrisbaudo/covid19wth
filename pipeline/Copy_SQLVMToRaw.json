@@ -64,7 +64,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "Sink_StorageAcct",
+									"referenceName": "Sink_Storage",
 									"type": "DatasetReference",
 									"parameters": {
 										"cw_fileName": "@item().destination.fileName"

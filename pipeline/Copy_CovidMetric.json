@@ -124,13 +124,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_ob5",
+						"referenceName": "Source_Metrics",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "Sink_Case",
+						"referenceName": "Sink_Cases",
 						"type": "DatasetReference"
 					}
 				]

@@ -1,5 +1,5 @@
 {
-	"name": "Sink_StorageAcct",
+	"name": "Sink_Storage",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "covid19-synapse-aa5ire5ywhlq4-WorkspaceDefaultStorage",

@@ -1,5 +1,5 @@
 {
-	"name": "SourceDataset_ob5",
+	"name": "Source_Metrics",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "covid19-synapse-aa5ire5ywhlq4-WorkspaceDefaultStorage",

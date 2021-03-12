@@ -1,5 +1,5 @@
 {
-	"name": "SourceDataset_p8p",
+	"name": "Source_Policies",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "covid19-synapse-aa5ire5ywhlq4-WorkspaceDefaultStorage",
