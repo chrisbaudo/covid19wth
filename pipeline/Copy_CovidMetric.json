@@ -26,6 +26,12 @@
 				"typeProperties": {
 					"source": {
 						"type": "DelimitedTextSource",
+						"additionalColumns": [
+							{
+								"name": "SourceSystem",
+								"value": "SqlDbCovidMetric"
+							}
+						],
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
@@ -100,7 +106,17 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "ISO3"
+									"name": "ISO3",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SourceSystem",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SourceSystem"
 								}
 							}
 						]
