@@ -64,7 +64,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "Sink_Storage",
+									"referenceName": "Sink_StorageAcct",
 									"type": "DatasetReference",
 									"parameters": {
 										"cw_fileName": "@item().destination.fileName"
@@ -115,6 +115,8 @@
 				]
 			}
 		},
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2021-03-12T18:48:45Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
 }
