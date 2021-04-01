@@ -65,7 +65,8 @@
     "sqlStorageWorkloadType": "GENERAL",
     "sqlStorageDisksConfigurationType": "NEW",
     "sqlStorageStartingDeviceId": 2,
-    "rServicesEnabled": "false"
+    "rServicesEnabled": "false",
+    "ohmdw-Sqlserver-Name": "[concat(parameters('namePrefix'), '-sqlserver-', uniqueString(resourceGroup().id))]"
   },
   "resources": [
     {
@@ -146,7 +147,7 @@
                 "https://mydevblobstoragechb.blob.core.windows.net/covid19mdwoh/DisableIEESC.ps1",
                 "https://mydevblobstoragechb.blob.core.windows.net/covid19mdwoh/SqlVMExtensionDriver.ps1"
               ],
-              "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ./SqlVMExtensionDriver.ps1 ', parameters('covid19BackupStorageAccountName'), ' ', parameters('covid19BackupStorageContainerName'), ' \"', parameters('covid19BackupStorageContainerSAS'), '\" ', parameters('covid19DatabaseName'), ' ', parameters('covid19BackupFileName'), ' ', parameters('sqlAdminLogin'), ' \"', parameters('sqlAdminLoginPassword'), '\" ', parameters('cosmosDBConnectionString'), ' ', parameters('cosmosDBDatabaseName'))]"
+              "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ./SqlVMExtensionDriver.ps1 ', variables('ohmdw-Sqlserver-Name'), ' ', parameters('covid19BackupStorageAccountName'), ' ', parameters('covid19BackupStorageContainerName'), ' \"', parameters('covid19BackupStorageContainerSAS'), '\" ', parameters('covid19DatabaseName'), ' ', parameters('covid19BackupFileName'), ' ', parameters('sqlAdminLogin'), ' \"', parameters('sqlAdminLoginPassword'), '\" ', parameters('cosmosDBConnectionString'), ' ', parameters('cosmosDBDatabaseName'))]"
             },
             "protectedSettings": {}
           }

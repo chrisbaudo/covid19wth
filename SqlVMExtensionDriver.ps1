@@ -1,4 +1,5 @@
 param (
+    [string]$ohmdwSqlserverName,    
     [string]$storageAccountName,
     [string]$storageContainerName,
     [string]$containerSAS,
@@ -10,7 +11,8 @@ param (
     [string]$cosmosDBDatabaseName
 )
 
-.\DeploySQLVM.ps1 -storageAccountName $storageAccountName `
+.\DeploySQLVM.ps1 -ohmdwSqlserverName $ohmdwSqlserverName `
+    -storageAccountName $storageAccountName `
     -storageContainerName $storageContainerName `
     -containerSAS $containerSAS `
     -databaseName $databaseName `

@@ -12,16 +12,16 @@
       "value": "vmadmin"
     },
     "vmAdminPassword": {
-      "value": "!P@ssw0rd123!"
+      "value": ""
     },
     "sqlAdminLogin": {
       "value": "sqladmin"
     },
     "sqlAdminLoginPassword": {
-      "value": "!P@ssw0rd123!"
+      "value": ""
     },
     "covid19DacPacPath": {
-      "value": "https://mydevblobstoragechb.blob.core.windows.net/covid19mdwoh/covid19.bacpac"
+      "value": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/covid19.bacpac"
     },
     "covid19BackupStorageAccountName": {
       "value": "mydevblobstoragechb"
@@ -30,7 +30,7 @@
       "value": "covid19mdwoh"
     },
     "covid19BackupStorageContainerSAS": {
-      "value": "sv=2019-12-12&st=2021-01-25T15%3A40%3A19Z&se=2021-01-29T15%3A40%3A00Z&sr=c&sp=rl&sig=7sguLNR48eEZvSxa7xQn8fpAX8WsqoP3nEGOuqw973k%3D"
+      "value": ""
     },
     "covid19BackupFileName": {
       "value": "covid19.bak"

@@ -10,7 +10,7 @@ param (
     [string]$cosmosDBDatabaseName
 )
 
-$covidFileName = "OxCGRT_latest.csv"
+$covidFileName = "covid_policy_tracker.csv"
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Invoke-WebRequest -Uri https://aka.ms/csdmtool -OutFile dt1.8.3.zip
@@ -20,6 +20,5 @@ $env:path += ";$($dtutil.DirectoryName)"
 $azcopy = Get-ChildItem -Recurse | Where-Object { $_.Name -ieq "azcopy.exe" }
 $env:path += ";$($azcopy.DirectoryName)"
 
-#AzCopy.exe cp "https://$($storageAccountName).blob.core.windows.net/$($storageContainerName)/$($covidFileName)?$($containerSAS)" ".\$($covidFileName)"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/OxCGRT/covid-policy-tracker/master/data/$($covidFileName)" -OutFile "$($covidFileName)"
+AzCopy.exe cp "https://$($storageAccountName).blob.core.windows.net/$($storageContainerName)/$($covidFileName)?$($containerSAS)" ".\$($covidFileName)"
 dt.exe /s:CsvFile /s.Files:.\$($covidFileName) /t:DocumentDBBulk /t.ConnectionString:"$($cosmosDBConnectionString);Database=$($cosmosDBDatabaseName)" /t.Collection:covidpolicy /t.CollectionThroughput:10000

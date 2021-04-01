@@ -52,7 +52,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://mydevblobstoragechb.blob.core.windows.net/covid19mdwoh/deploycosmosdb.json",
+          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploycosmosdb.json",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -72,7 +72,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://mydevblobstoragechb.blob.core.windows.net/covid19mdwoh/deploysqlazure.json",
+          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploysqlazure.json",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -104,7 +104,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://mydevblobstoragechb.blob.core.windows.net/covid19mdwoh/deploysynapse.json",
+          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploysynapse.json",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -130,7 +130,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://mydevblobstoragechb.blob.core.windows.net/covid19mdwoh/deploysqlvm.json",
+          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploysqlvm.json",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -171,7 +171,7 @@
             "value": "[reference('deployCosmosLinkedTemplate').outputs.connectionString.value]"
           },
           "cosmosDBDatabaseName":{
-            "value": "covid19"
+            "value": "[parameters('covid19DatabaseName')]"
           }
         }
       }
