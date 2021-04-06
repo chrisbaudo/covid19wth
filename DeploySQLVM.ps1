@@ -30,4 +30,4 @@ $env:path += ";$($sqlpackage.DirectoryName)"
 
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/covid19.bacpac -OutFile covid19.bacpac
 $localBacpacFile = Get-Item "covid19.bacpac"
-sqlpackage.exe /Action:Import /tsn:tcp:$($ohmdwSqlserverName).database.windows.net,1433 /tdn:$($databaseName) /tu:$($sqlUserName) /tp:$($sqlPassword) /sf:$($localBacpacFile) /p:DatabaseEdition=Standard /p:DatabaseServiceObjective=S2 /p:Storage=File
+sqlpackage.exe /Action:Import /tsn:tcp:$($ohmdwSqlserverName).database.windows.net,1433 /tdn:$($databaseName) /tu:$($sqlUserName) /tp:$($sqlPassword) /sf:$($localBacpacFile) /p:DatabaseEdition=Standard /p:DatabaseServiceObjective=S2
