@@ -73,22 +73,7 @@
             "requestedServiceObjectiveName": "S2"
           },
           "resources": [
-            {
-              "name": "Import",
-              "type": "extensions",
-              "apiVersion": "2014-04-01",
-              "dependsOn": [
-                "[concat('Microsoft.Sql/servers/', variables('ohmdw-Sqlserver-Name'), '/databases/covid19')]"
-              ],
-              "properties": {
-                "storageKeyType": "SharedAccessKey",
-                "storageKey": "[parameters('dacPacContainerSAS')]",
-                "storageUri": "[parameters('covid19DacPacPath')]",
-                "administratorLogin": "[parameters('sqlAdminLogin')]",
-                "administratorLoginPassword": "[parameters('sqlAdminLoginPassword')]",
-                "operationMode": "Import"
-              }
-            }
+    
           ]
         }
       ]
