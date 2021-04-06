@@ -23,8 +23,8 @@ Invoke-Sqlcmd -Username $sqlUserName -Password $sqlPassword -Query "RESTORE DATA
 
 # SQL DB restore
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -Uri https://go.microsoft.com/fwlink/?linkid=2157302 -OutFile sqlpackage-win7-x64-en-US-15.0.5084.2
-Expand-Archive -Path sqlpackage-win7-x64-en-US-15.0.5084.2 -DestinationPath .
+Invoke-WebRequest -Uri https://go.microsoft.com/fwlink/?linkid=2157302 -OutFile sqlpackage-win7-x64-en-US-15.0.5084.2.zip
+Expand-Archive -Path sqlpackage-win7-x64-en-US-15.0.5084.2.zip -DestinationPath .
 $sqlpackage = Get-ChildItem -Recurse | Where-Object { $_.Name -ieq "sqlpackage.exe" }
 $env:path += ";$($sqlpackage.DirectoryName)"
 
