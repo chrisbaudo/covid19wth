@@ -16,7 +16,7 @@ Expand-Archive -Path azcopy-v10-windows.zip -DestinationPath .
 $azcopy = Get-ChildItem -Recurse | Where-Object { $_.Name -ieq "azcopy.exe" }
 $env:path += ";$($azcopy.DirectoryName)"
 
-AzCopy.exe cp "https://$($storageAccountName).blob.core.windows.net/$($storageContainerName)/$($databaseBackupName)?$($containerSAS)" ".\$($databaseBackupName)"
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/$($databaseBackupName) -OutFile $($databaseBackupName)
 
 $localBackupFile = Get-Item "$($databaseBackupName)"
 Invoke-Sqlcmd -Username $sqlUserName -Password $sqlPassword -Query "RESTORE DATABASE $($databaseName) FROM DISK = '$($localBackupFile.FullName)' WITH STATS = 5" -ServerInstance "."
