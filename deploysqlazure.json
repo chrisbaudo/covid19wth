@@ -72,9 +72,7 @@
             "maxSizeBytes": 1073741824,
             "requestedServiceObjectiveName": "S2"
           },
-          "resources": [
-    
-          ]
+          "resources": []
         }
       ]
     }
