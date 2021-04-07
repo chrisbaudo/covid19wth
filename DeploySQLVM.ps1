@@ -1,8 +1,5 @@
 param (
     [string]$ohmdwSqlserverName,
-    [string]$storageAccountName,
-    [string]$storageContainerName,
-    [string]$containerSAS,
     [string]$databaseName,
     [string]$databaseBackupName,
     [string]$sqlUserName,

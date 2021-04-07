@@ -27,15 +27,6 @@
     "covid19DacPacPath": {
       "type": "string"
     },
-    "covid19BackupStorageAccountName": {
-      "type": "string"
-    },
-    "covid19BackupStorageContainerName": {
-      "type": "string"
-    },
-    "covid19BackupStorageContainerSAS": {
-      "type": "string"
-    },
     "covid19BackupFileName": {
       "type": "string"
     },
@@ -90,9 +81,6 @@
           },
           "covid19DacPacPath": {
             "value": "[parameters('covid19DacPacPath')]"
-          },
-          "dacPacContainerSAS": {
-            "value": "[parameters('covid19BackupStorageContainerSAS')]"
           }
         }
       }
@@ -151,15 +139,6 @@
           },
           "sqlAdminLoginPassword": {
             "value": "[parameters('sqlAdminLoginPassword')]"
-          },
-          "covid19BackupStorageAccountName": {
-            "value": "[parameters('covid19BackupStorageAccountName')]"
-          },
-          "covid19BackupStorageContainerName": {
-            "value": "[parameters('covid19BackupStorageContainerName')]"
-          },
-          "covid19BackupStorageContainerSAS": {
-            "value": "[parameters('covid19BackupStorageContainerSAS')]"
           },
           "covid19BackupFileName": {
             "value": "[parameters('covid19BackupFileName')]"

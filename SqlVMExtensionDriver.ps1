@@ -1,8 +1,5 @@
 param (
     [string]$ohmdwSqlserverName,    
-    [string]$storageAccountName,
-    [string]$storageContainerName,
-    [string]$containerSAS,
     [string]$databaseName,
     [string]$databaseBackupName,
     [string]$sqlUserName,
@@ -12,18 +9,12 @@ param (
 )
 
 .\DeploySQLVM.ps1 -ohmdwSqlserverName $ohmdwSqlserverName `
-    -storageAccountName $storageAccountName `
-    -storageContainerName $storageContainerName `
-    -containerSAS $containerSAS `
     -databaseName $databaseName `
     -databaseBackupName $databaseBackupName `
     -sqlUserName $sqlUserName `
     -sqlPassword $sqlPassword
 
-.\DeployCosmosDB.ps1 -storageAccountName $storageAccountName `
-    -storageContainerName $storageContainerName `
-    -containerSAS $containerSAS `
-    -databaseName $databaseName `
+.\DeployCosmosDB.ps1 -databaseName $databaseName `
     -databaseBackupName $databaseBackupName `
     -sqlUserName $sqlUserName `
     -sqlPassword $sqlPassword `

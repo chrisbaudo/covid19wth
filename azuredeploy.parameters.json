@@ -23,15 +23,6 @@
     "covid19DacPacPath": {
       "value": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/covid19.bacpac"
     },
-    "covid19BackupStorageAccountName": {
-      "value": "mydevblobstoragechb"
-    },
-    "covid19BackupStorageContainerName": {
-      "value": "covid19mdwoh"
-    },
-    "covid19BackupStorageContainerSAS": {
-      "value": ""
-    },
     "covid19BackupFileName": {
       "value": "covid19.bak"
     },
