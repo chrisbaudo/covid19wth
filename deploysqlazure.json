@@ -9,9 +9,6 @@
     "sqlAdminLoginPassword": {
       "type": "securestring"
     },
-    "covid19DacPacPath": {
-      "type": "string"
-    },
     "location": {
       "type": "string",
       "defaultValue": "[resourceGroup().location]"

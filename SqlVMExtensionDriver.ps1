@@ -3,7 +3,7 @@ param (
     [string]$databaseName,
     [string]$databaseBackupName,
     [string]$sqlUserName,
-    [string]$sqlPassword,
+    [securestring]$sqlPassword,
     [string]$cosmosDBConnectionString,
     [string]$cosmosDBDatabaseName
 )

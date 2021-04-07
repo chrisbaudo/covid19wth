@@ -15,17 +15,6 @@
             "type": "string",
             "defaultValue": "covid19",
             "maxLength": 30
-        },
-        "containerName": {
-            "type": "string",
-            "defaultValue": "covidpolicy",
-            "maxLength": 30
-        },
-        "throughput": {
-            "type": "int",
-            "defaultValue": 400,
-            "minValue": 400,
-            "maxValue": 1000000
         }
     },
     "variables": {
