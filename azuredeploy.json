@@ -37,9 +37,9 @@
   "variables": {},
   "resources": [
     {
-      "apiVersion": "2020-10-01",
       "name": "deployCosmosLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2020-10-01",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
@@ -56,9 +56,9 @@
       }
     },
     {
-      "apiVersion": "2020-10-01",
       "name": "deploySqlAzureLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2020-10-01",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
@@ -81,9 +81,9 @@
       }
     },
     {
-      "apiVersion": "2020-10-01",
       "name": "deploySynapseLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2020-10-01",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
@@ -106,9 +106,9 @@
       }
     },
     {
-      "apiVersion": "2020-10-01",
       "name": "deploySqlVmLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2020-10-01",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
