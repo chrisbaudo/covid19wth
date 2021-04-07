@@ -37,13 +37,13 @@
   "variables": {},
   "resources": [
     {
-      "apiVersion": "2017-05-10",
+      "apiVersion": "2020-06-01",
       "name": "deployCosmosLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploycosmosdb.json",
+          "relativePath": "deploycosmosdb.json",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -57,13 +57,13 @@
       }
     },
     {
-      "apiVersion": "2017-05-10",
+      "apiVersion": "2020-06-01",
       "name": "deploySqlAzureLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploysqlazure.json",
+          "relativePath": "deploysqlazure.json",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -83,13 +83,13 @@
       }
     },
     {
-      "apiVersion": "2017-05-10",
+      "apiVersion": "2020-06-01",
       "name": "deploySynapseLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploysynapse.json",
+          "relativePath": "deploysynapse.json",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -109,13 +109,13 @@
       }
     },
     {
-      "apiVersion": "2017-05-10",
+      "apiVersion": "2020-06-01",
       "name": "deploySqlVmLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploysqlvm.json",
+          "relativePath": "deploysqlvm.json",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {

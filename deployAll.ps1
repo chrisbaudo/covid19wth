@@ -1,7 +1,7 @@
 param(
     [string]$teamCount = "1",
-    [string]$deploymentTemplateFile = "$PSScriptRoot\ARM\azuredeploy.json",
-    [string]$deploymentParameterFile = "$PSScriptRoot\ARM\azuredeploy.parameters.json",
+    [string]$deploymentTemplateFile = "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/azuredeploy.json",
+    [string]$deploymentParameterFile = "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/azuredeploy.parameters.json",
     [string]$location = "eastus",
     [securestring]$sqlAdminLoginPassword,
     [securestring]$vmAdminPassword
@@ -27,5 +27,5 @@ for ($i = 1; $i -le $teamCount; $i++)
     if (!$resourceGroup) {
         $resourceGroup = New-AzResourceGroup -Name $resourceGroupName -Location $region
     }
-    New-AzResourceGroupDeployment -Name $deploymentName -ResourceGroupName $resourceGroupName -Location $region -TemplateFile $deploymentTemplateFile -TemplateParameterFile $deploymentParameterFile -sqlAdminLoginPassword $sqlAdminLoginPassword -vmAdminPassword $vmAdminPassword #-AsJob    
+    New-AzResourceGroupDeployment -Name $deploymentName -ResourceGroupName $resourceGroupName -Location $region -TemplateUri $deploymentTemplateFile -TemplateParameterUri $deploymentParameterFile -sqlAdminLoginPassword $sqlAdminLoginPassword -vmAdminPassword $vmAdminPassword #-AsJob    
 }
