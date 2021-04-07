@@ -14,15 +14,6 @@
     "sqlAdminLoginPassword": {
       "type": "securestring"
     },
-    "covid19BackupStorageAccountName": {
-      "type": "string"
-    },
-    "covid19BackupStorageContainerName": {
-      "type": "string"
-    },
-    "covid19BackupStorageContainerSAS": {
-      "type": "securestring"
-    },
     "covid19BackupFileName": {
       "type": "string"
     },
@@ -147,7 +138,7 @@
                 "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/DisableIEESC.ps1",
                 "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/SqlVMExtensionDriver.ps1"
               ],
-              "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ./SqlVMExtensionDriver.ps1 ', variables('ohmdw-Sqlserver-Name'), ' ', parameters('covid19BackupStorageAccountName'), ' ', parameters('covid19BackupStorageContainerName'), ' \"', parameters('covid19BackupStorageContainerSAS'), '\" ', parameters('covid19DatabaseName'), ' ', parameters('covid19BackupFileName'), ' ', parameters('sqlAdminLogin'), ' \"', parameters('sqlAdminLoginPassword'), '\" ', parameters('cosmosDBConnectionString'), ' ', parameters('cosmosDBDatabaseName'))]"
+              "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ./SqlVMExtensionDriver.ps1 ', variables('ohmdw-Sqlserver-Name'), ' ', parameters('covid19DatabaseName'), ' ', parameters('covid19BackupFileName'), ' ', parameters('sqlAdminLogin'), ' \"', parameters('sqlAdminLoginPassword'), '\" ', parameters('cosmosDBConnectionString'), ' ', parameters('cosmosDBDatabaseName'))]"
             },
             "protectedSettings": {}
           }
