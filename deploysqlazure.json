@@ -12,9 +12,6 @@
     "covid19DacPacPath": {
       "type": "string"
     },
-    "dacPacContainerSAS": {
-      "type": "securestring"
-    },
     "location": {
       "type": "string",
       "defaultValue": "[resourceGroup().location]"
