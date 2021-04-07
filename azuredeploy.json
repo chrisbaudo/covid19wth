@@ -43,7 +43,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "relativePath": "deploycosmosdb.json"
+          "relativePath": "./deploycosmosdb.json"
         },
         "parameters": {
           "location": {
@@ -62,7 +62,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "relativePath": "deploysqlazure.json"
+          "relativePath": "./deploysqlazure.json"
         },
         "parameters": {
           "location": {
@@ -87,7 +87,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "relativePath": "deploysynapse.json"
+          "relativePath": "./deploysynapse.json"
         },
         "parameters": {
           "location": {
@@ -112,7 +112,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "relativePath": "deploysqlvm.json"
+          "relativePath": "./deploysqlvm.json"
         },
         "parameters": {
           "location": {
