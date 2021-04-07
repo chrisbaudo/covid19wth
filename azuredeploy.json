@@ -78,9 +78,6 @@
           },
           "sqlAdminLoginPassword": {
             "value": "[parameters('sqlAdminLoginPassword')]"
-          },
-          "covid19DacPacPath": {
-            "value": "[parameters('covid19DacPacPath')]"
           }
         }
       }
