@@ -1,5 +1,5 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2020-10-01/deploymentTemplate.json#",
+  "$schema": "https://schema.management.azure.com/schemas/2019-08-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
     "location": {
@@ -37,7 +37,7 @@
   "variables": {},
   "resources": [
     {
-      "apiVersion": "2020-06-01",
+      "apiVersion": "2020-10-01",
       "name": "deployCosmosLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "properties": {
@@ -57,7 +57,7 @@
       }
     },
     {
-      "apiVersion": "2020-06-01",
+      "apiVersion": "2020-10-01",
       "name": "deploySqlAzureLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "properties": {
@@ -83,7 +83,7 @@
       }
     },
     {
-      "apiVersion": "2020-06-01",
+      "apiVersion": "2020-10-01",
       "name": "deploySynapseLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "properties": {
@@ -109,7 +109,7 @@
       }
     },
     {
-      "apiVersion": "2020-06-01",
+      "apiVersion": "2020-10-01",
       "name": "deploySqlVmLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "properties": {
