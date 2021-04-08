@@ -37,13 +37,13 @@
   "variables": {},
   "resources": [
     {
+      "apiVersion": "2017-05-10",
       "name": "deployCosmosLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2020-10-01",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[uri(deployment().properties.templateLink.uri, 'deploycosmosdb.json')]",
+          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploycosmosdb.json",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -57,13 +57,13 @@
       }
     },
     {
+      "apiVersion": "2017-05-10",
       "name": "deploySqlAzureLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2020-10-01",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[uri(deployment().properties.templateLink.uri, 'deploysqlazure.json')]",
+          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploysqlazure.json",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -83,13 +83,13 @@
       }
     },
     {
+      "apiVersion": "2017-05-10",
       "name": "deploySynapseLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2020-10-01",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[uri(deployment().properties.templateLink.uri, 'deploysynapse.json')]",
+          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploysynapse.json",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -109,13 +109,13 @@
       }
     },
     {
+      "apiVersion": "2017-05-10",
       "name": "deploySqlVmLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2020-10-01",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[uri(deployment().properties.templateLink.uri, 'deploysqlvm.json')]",
+          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploysqlvm.json",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
