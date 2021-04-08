@@ -63,7 +63,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[uri(deployment().properties.templateLink.uri, 'deploycosmosdb.json')]",
+          "uri": "[uri(deployment().properties.templateLink.uri, 'deploysqlazure.json')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -89,7 +89,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[uri(deployment().properties.templateLink.uri, 'deploycosmosdb.json')]",
+          "uri": "[uri(deployment().properties.templateLink.uri, 'deploysynapse.json')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -115,7 +115,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[uri(deployment().properties.templateLink.uri, 'deploycosmosdb.json')]",
+          "uri": "[uri(deployment().properties.templateLink.uri, 'deploysqlvm.json')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
