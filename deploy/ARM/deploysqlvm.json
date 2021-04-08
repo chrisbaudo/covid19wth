@@ -139,10 +139,10 @@
             "autoUpgradeMinorVersion": true,
             "settings": {
               "fileUris": [
-                "[uri(parameters('covid19BaseUri'),'deploy/scripts/DeploySQLVM.ps1')]",
-                "[uri(parameters('covid19BaseUri'),'deploy/scripts/DeployCosmosDB.ps1')]",
-                "[uri(parameters('covid19BaseUri'),'deploy/scripts/DisableIEESC.ps1')]",
-                "[uri(parameters('covid19BaseUri'),'deploy/scripts/SqlVMExtensionDriver.ps1')]"
+                "[uri(parameters('covid19BaseUri'),'deploy/Scripts/DeploySQLVM.ps1')]",
+                "[uri(parameters('covid19BaseUri'),'deploy/Scripts/DeployCosmosDB.ps1')]",
+                "[uri(parameters('covid19BaseUri'),'deploy/Scripts/DisableIEESC.ps1')]",
+                "[uri(parameters('covid19BaseUri'),'deploy/Scripts/SqlVMExtensionDriver.ps1')]"
               ],
               "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ./SqlVMExtensionDriver.ps1 ', variables('ohmdw-Sqlserver-Name'), ' ', parameters('covid19DatabaseName'), ' ', parameters('covid19BaseUri'), ' ', parameters('covid19DacPacFileName'), ' ', parameters('covid19BackupFileName'), ' ', parameters('sqlAdminLogin'), ' \"', parameters('sqlAdminLoginPassword'), '\" ', parameters('cosmosDBConnectionString'), ' ', parameters('cosmosDBDatabaseName'))]"
             },
