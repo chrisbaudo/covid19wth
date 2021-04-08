@@ -1,10 +1,14 @@
 param (
     [string]$ohmdwSqlserverName,
     [string]$databaseName,
+    [string]$covid19BaseUri,
+    [string]$databaseDacPacName,
     [string]$databaseBackupName,
     [string]$sqlUserName,
     [string]$sqlPassword
 )
+
+$dataFolder = "data"
 
 # SQL Server restore
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -13,7 +17,7 @@ Expand-Archive -Path azcopy-v10-windows.zip -DestinationPath .
 $azcopy = Get-ChildItem -Recurse | Where-Object { $_.Name -ieq "azcopy.exe" }
 $env:path += ";$($azcopy.DirectoryName)"
 
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/$($databaseBackupName) -OutFile $($databaseBackupName)
+Invoke-WebRequest -Uri $($covid19BaseUri)$($dataFolder)/$($databaseBackupName) -OutFile $($databaseBackupName)
 
 $localBackupFile = Get-Item "$($databaseBackupName)"
 Invoke-Sqlcmd -Username $sqlUserName -Password $sqlPassword -Query "RESTORE DATABASE $($databaseName) FROM DISK = '$($localBackupFile.FullName)' WITH STATS = 5" -ServerInstance "."
@@ -25,6 +29,6 @@ Expand-Archive -Path sqlpackage-win7-x64-en-US-15.0.5084.2.zip -DestinationPath 
 $sqlpackage = Get-ChildItem -Recurse | Where-Object { $_.Name -ieq "sqlpackage.exe" }
 $env:path += ";$($sqlpackage.DirectoryName)"
 
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/covid19.bacpac -OutFile covid19.bacpac
-$localBacpacFile = Get-Item "covid19.bacpac"
+Invoke-WebRequest -Uri $($covid19BaseUri)$($dataFolder)/$($databaseDacPacName) -OutFile $($databaseDacPacName)
+$localBacpacFile = Get-Item $($databaseDacPacName)
 sqlpackage.exe /Action:Import /tsn:tcp:$($ohmdwSqlserverName).database.windows.net,1433 /tdn:$($databaseName) /tu:$($sqlUserName) /tp:$($sqlPassword) /sf:$($localBacpacFile) /p:DatabaseEdition=Standard /p:DatabaseServiceObjective=S2

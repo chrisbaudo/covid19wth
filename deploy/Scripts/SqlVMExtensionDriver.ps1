@@ -1,6 +1,8 @@
 param (
     [string]$ohmdwSqlserverName,    
     [string]$databaseName,
+    [string]$covid19BaseUri,
+    [string]$databaseDacPacName,
     [string]$databaseBackupName,
     [string]$sqlUserName,
     [string]$sqlPassword,
@@ -10,6 +12,8 @@ param (
 
 .\DeploySQLVM.ps1 -ohmdwSqlserverName $ohmdwSqlserverName `
     -databaseName $databaseName `
+    -covid19BaseUri $covid19BaseUri `
+    -databaseDacPacName $databaseDacPacName `
     -databaseBackupName $databaseBackupName `
     -sqlUserName $sqlUserName `
     -sqlPassword $sqlPassword
