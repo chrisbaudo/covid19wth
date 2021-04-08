@@ -140,6 +140,12 @@
           "sqlAdminLoginPassword": {
             "value": "[parameters('sqlAdminLoginPassword')]"
           },
+          "covid19BaseUri": {
+            "value": "[parameters('covid19BaseUri')]"
+          },
+          "covid19DacPacFileName": {
+            "value": "[parameters('covid19DacPacFileName')]"
+          },
           "covid19BackupFileName": {
             "value": "[parameters('covid19BackupFileName')]"
           },
