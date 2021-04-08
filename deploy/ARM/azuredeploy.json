@@ -24,7 +24,10 @@
     "sqlAdminLoginPassword": {
       "type": "securestring"
     },
-    "covid19DacPacPath": {
+    "covid19BaseUri": {
+      "type": "string"
+    },
+    "covid19DacPacFileName": {
       "type": "string"
     },
     "covid19BackupFileName": {
@@ -43,7 +46,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploycosmosdb.json",
+          "uri": "[uri(parameters('covid19BaseUri'),'deploy/ARM/deploycosmosdb.json')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -63,7 +66,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploysqlazure.json",
+          "uri": "[uri(parameters('covid19BaseUri'),'deploy/ARM/deploysqlazure.json')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -89,7 +92,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploysynapse.json",
+          "uri": "[uri(parameters('covid19BaseUri'),'deploy/ARM/deploysynapse.json')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -115,7 +118,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/deploysqlvm.json",
+          "uri": "[uri(parameters('covid19BaseUri'),'deploy/ARM/deploysqlvm.json')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {

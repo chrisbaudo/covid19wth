@@ -20,8 +20,11 @@
     "sqlAdminLoginPassword": {
       "value": ""
     },
-    "covid19DacPacPath": {
-      "value": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/covid19.bacpac"
+    "covid19BaseUri": {
+      "value": "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/"
+    },
+    "covid19DacPacFileName": {
+      "value": "covid19.bacpac"
     },
     "covid19BackupFileName": {
       "value": "covid19.bak"

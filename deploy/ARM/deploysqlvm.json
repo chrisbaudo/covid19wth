@@ -14,6 +14,12 @@
     "sqlAdminLoginPassword": {
       "type": "securestring"
     },
+    "covid19BaseUri": {
+      "type": "string"
+    },
+    "covid19DacPacFileName": {
+      "type": "string"
+    },
     "covid19BackupFileName": {
       "type": "string"
     },
@@ -133,12 +139,12 @@
             "autoUpgradeMinorVersion": true,
             "settings": {
               "fileUris": [
-                "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/DeploySQLVM.ps1",
-                "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/DeployCosmosDB.ps1",
-                "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/DisableIEESC.ps1",
-                "https://raw.githubusercontent.com/chrisbaudo/covid19wth/main/SqlVMExtensionDriver.ps1"
+                "[uri(parameters('covid19BaseUri'),'deploy/scripts/DeploySQLVM.ps1')]",
+                "[uri(parameters('covid19BaseUri'),'deploy/scripts/DeployCosmosDB.ps1')]",
+                "[uri(parameters('covid19BaseUri'),'deploy/scripts/DisableIEESC.ps1')]",
+                "[uri(parameters('covid19BaseUri'),'deploy/scripts/SqlVMExtensionDriver.ps1')]"
               ],
-              "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ./SqlVMExtensionDriver.ps1 ', variables('ohmdw-Sqlserver-Name'), ' ', parameters('covid19DatabaseName'), ' ', parameters('covid19BackupFileName'), ' ', parameters('sqlAdminLogin'), ' \"', parameters('sqlAdminLoginPassword'), '\" ', parameters('cosmosDBConnectionString'), ' ', parameters('cosmosDBDatabaseName'))]"
+              "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ./SqlVMExtensionDriver.ps1 ', variables('ohmdw-Sqlserver-Name'), ' ', parameters('covid19DatabaseName'), ' ', parameters('covid19BaseUri'), ' ', parameters('covid19DacPacFileName'), ' ', parameters('covid19BackupFileName'), ' ', parameters('sqlAdminLogin'), ' \"', parameters('sqlAdminLoginPassword'), '\" ', parameters('cosmosDBConnectionString'), ' ', parameters('cosmosDBDatabaseName'))]"
             },
             "protectedSettings": {}
           }
