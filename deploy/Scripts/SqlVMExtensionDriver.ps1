@@ -19,6 +19,7 @@ param (
     -sqlPassword $sqlPassword
 
 .\DeployCosmosDB.ps1 -databaseName $databaseName `
+    -covid19BaseUri $covid19BaseUri `
     -databaseBackupName $databaseBackupName `
     -sqlUserName $sqlUserName `
     -sqlPassword $sqlPassword `
